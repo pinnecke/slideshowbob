@@ -40,15 +40,19 @@ def archive_content(md_file_dir_dst, md_file_dir_src, md_file_name, commit_name,
 		open(md_file_fullpath_dst, 'w').close()
 	md_file_name = md_file_dir_src + md_file_name
 	latest_contents = open(md_file_name, "r").read()
-	history_file = open(md_file_fullpath_dst, "r")
-	history_contents = history_file.read()
-	history_file.close()
-	os.remove(md_file_fullpath_dst)
-	history_file = open(md_file_fullpath_dst, "w") 
-	commit = '# ' + commit_name + "\n\n" + latest_contents + "\n\n\n" + history_contents
-	history_file.writelines(commit)
-	md_file_src_fresh = open(md_file_name, "w")
-	md_file_src_fresh.writelines(content_template)
+	if latest_contents != PERSONAL_SLIDE_TEMPLATE:
+		history_file = open(md_file_fullpath_dst, "r")
+		history_contents = history_file.read()
+		history_file.close()
+		os.remove(md_file_fullpath_dst)
+		history_file = open(md_file_fullpath_dst, "w") 
+		commit = '# ' + commit_name + "\n\n" + latest_contents + "\n\n\n" + history_contents
+		history_file.writelines(commit)
+		md_file_src_fresh = open(md_file_name, "w")
+		md_file_src_fresh.writelines(content_template)
+		return True
+	else:
+		return False
 
 
 current_date = date.today().strftime("%B %d, %Y")
@@ -67,9 +71,11 @@ def filename_from_path(path):
 for md_file in os.listdir("content/latest/personal"):
 	if md_file.endswith(".md"):
 		user_name = str(md_file)
-		archive_content(PERSONAL_SLIDE_HISTORY, "content/latest/personal/", md_file, commit_name, PERSONAL_SLIDE_TEMPLATE)
-		print ("added history entry for user '" + user_name.replace(".md", "") + "'")
-
+		result = archive_content(PERSONAL_SLIDE_HISTORY, "content/latest/personal/", md_file, commit_name, PERSONAL_SLIDE_TEMPLATE)
+		if result == True:
+			print ("added history entry for user '" + user_name.replace(".md", "") + "'")
+		else:
+			print ("skipped user '" + user_name.replace(".md", "") + "' because no slide was presented")
 
 archive_content(SPECIAL_SLIDE_HISTORY, "content/latest/special/", "Additional Concerns.md", commit_name, ADDITIONAL_CONCERNS_SLIDE_TEMPLATE)
 print ("added history entry for additional concerns")

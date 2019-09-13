@@ -48,7 +48,8 @@ body {
 }
 
 a:link, a:visited, a:active {
-  color: #0068b4;
+  color: #499C76
+;
   text-decoration: none;
 }
 
@@ -64,7 +65,8 @@ a:hover, a:active {
   height: 85%;
   border-top-width: 10px;
   border-top-style: solid;
-  border-top-color: #0068b4
+  border-top-color: #499C76
+
   ;
 }
 
@@ -128,7 +130,7 @@ a:hover, a:active {
   list-style: none;
   position: relative;
   left: 0;
-  width: 500%
+  width: 700%
   ;
   padding: 0;
   -webkit-transition: left .5s ease-in-out;
@@ -141,7 +143,7 @@ a:hover, a:active {
 
 .bob-slider-elements>li {
   float: left;
-  width: 20.0%
+  width: 14.2857142857%
   ;
   height: 100%;
   position: relative;
@@ -159,6 +161,8 @@ a:hover, a:active {
 #slide03:checked ~ .bob-slider-elements { left: -200%; }
 #slide04:checked ~ .bob-slider-elements { left: -300%; }
 #slide05:checked ~ .bob-slider-elements { left: -400%; }
+#slide06:checked ~ .bob-slider-elements { left: -500%; }
+#slide07:checked ~ .bob-slider-elements { left: -600%; }
 
 
 .bob-slider input {
@@ -183,9 +187,11 @@ a:hover, a:active {
   border-radius: 50%;
   display: block;
   cursor: pointer;
-  background: #0068b4
+  background: #499C76
+
   ;
-  color: #0068b4
+  color: #499C76
+
   ;
 }
 
@@ -195,7 +201,9 @@ a:hover, a:active {
 ,
 #slide03:checked ~ .bob-slider-controls label[for="slide03"], 
 #slide04:checked ~ .bob-slider-controls label[for="slide04"], 
-#slide05:checked ~ .bob-slider-controls label[for="slide05"]
+#slide05:checked ~ .bob-slider-controls label[for="slide05"], 
+#slide06:checked ~ .bob-slider-controls label[for="slide06"], 
+#slide07:checked ~ .bob-slider-controls label[for="slide07"]
 
 
 {

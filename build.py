@@ -38,6 +38,8 @@ PERSONAL_SLIDE_SEC_NEXT_STEPS = "Next Steps"
 # ----------------------------------------------------------------------------------------------------------------------
 
 color_hightlight = open('customize/color-highlight', 'r').read()
+frontpage_title = open('customize/frontpage-title', 'r').read()
+frontpage_sub_title = open('customize/frontpage-sub-title', 'r').read()
 
 # ----------------------------------------------------------------------------------------------------------------------
 # html snippets from some templates
@@ -226,6 +228,11 @@ css_contents = css_contents.replace("/* bob-customize-color-highlight */", color
 
 
 index_contents = index_contents.replace("<!-- bob-date-today -->", date.today().strftime("%B %d, %Y"));
+
+index_contents = index_contents.replace("<!-- bob-frontpage-title -->", frontpage_title)
+index_contents = index_contents.replace("<!-- bob-frontpage-sub-title -->", frontpage_sub_title)
+
+print (frontpage_title)
 
 # ----------------------------------------------------------------------------------------------------------------------
 # write everything out
