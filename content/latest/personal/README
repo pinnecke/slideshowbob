@@ -1,0 +1,5 @@
+THIS DIRECTORY MUST NOT BE REMOVED
+
+This directory contains personal slides formatted as markdown file for individual presenters. 
+If a presenter shall be removed for the current presentation, remove the markdown file of this presenter.
+In case a presenter is not listed here, use 'python add-user.py' from the root directory.

@@ -1,0 +1,9 @@
+THIS DIRECTORY MUST NOT BE REMOVED
+
+This directory contains the history of personal slides formatted as markdown file for individual presenters. 
+
+Everytime a presentation was commited (via 'python commit.py'), the latest slide content for a presenter
+is added on top of the history of that presenter. Additionally, the commit name (typically the presentation
+day) is added as the headline within the markdown file. 
+
+If the history of a presenter should be removed, remove the presenters markdown file.
