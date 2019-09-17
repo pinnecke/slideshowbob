@@ -25,17 +25,19 @@ In a nutshell, these are the feature of Slideshow Bob:
 
 ## Workflow by Example
 
-Imaging a medium-sized team that works in a company, that has a strong branding for a particular fruit. On a regular basis, all team mates assemble and give an overview on their current state. A dedicated team member, Jane Doe, is responsible to manage the status reports process. By luck, she stumbled upon Slideshow Bob.
+Imaging a medium-sized team that works in a company. This company has a strong branding for a particular fruit. On a regular basis, all team mates assemble and give an overview on their current state. A dedicated team member, Jane Doe, is responsible to manage the status reports process. By luck, she stumbled upon Slideshow Bob.
 
-Another team member, John Doe, gives his regular report and must make a team-wide special announcement, and who wants to express some additional concerns. 
+Another team member, John Doe, gives his regular report and must make a team-wide special announcement, and wants to express some additional concerns. 
 
-Let's follow both during their adventure with Slideshow Bob. Imagine Slideshow Bob is stored on some network drive (or stored in a repository, or ...)
+Let's follow both during their adventure with Slideshow Bob. 
+
+Imagine Slideshow Bob is stored on some network drive (or stored in a repository, or ...)
 
 ### Personal Slides
 
-A John Doe gives status information in his own personal slide description file, which is a markdown file with his name (e.g., `John Doe.md`) and which is always located in `content/latest/personal`. 
+A John Doe gives status information in his own personal slide description file, which is a markdown file with his name (e.g., `John Doe.md`). 
 
-This file has the following structure:
+This file is always located in `content/latest/personal/`, and has the following structure:
 
 
 ```markdown
@@ -67,7 +69,9 @@ This file has the following structure:
 
 ```
 
-Let's say John works on two projects, buying more bananas and writing a book about it. To the point of the next meeting, we just had a phone call with the bananas dealer and always ordered some bananas. Since he was very busy with that, we couldn't manage to write much about it in his book. During the team meeting, John has questions on the color of bananas and tries to find a college who will help him carrying all soon arriving bananas. Since the dealer told John an awesome joke about apes, John wants to share this with his colleges. Finally, John's next steps are making some space in his office for the bunch of bananas that will arrive very soon. 
+Let's say John works on two projects, buying more bananas and writing a book about this. To the point of the next meeting, he just had a phone call with the bananas dealer and ordered some bananas. Since he was very busy with that, he couldn't manage to write much about it for his book. 
+
+During the team meeting, John tries to find a college who will help him carrying all soon arriving bananas. Since the dealer told John an awesome joke about apes, John wants to share this with his colleges during the meeting. Finally, John's next steps are making some space in his office for the bunch of bananas that will arrive very soon. 
 
 During the days, he fills his personal slide description file with the following contents.
 
@@ -125,7 +129,7 @@ John knows that his special announcement will be added to the presentation, once
 
 ```
 
-Image that a bit of time passes and that the team presentation takes place very soon. Out of nowhere, John realizes that he has had absolute no budget, and just took all the team's money to pay for his bananas. He decided to  express an additional concern. Similar to his special announcement, he edits the file `Additional Concerns.md` located in `content/latest/special`. 
+Image that a bit of time passes and that the team presentation takes place very soon. Out of nowhere, John realizes that he has had absolute no budget, and just took all the team's money to pay for his bananas. He decided to express an additional concern. Similar to his special announcement, he edits the file `Additional Concerns.md` located in `content/latest/special`. 
 
 Briefly before the team meeting, all other team members prepare their personal slides, too.
 
@@ -169,7 +173,7 @@ $ python commit.py
 
 Slideshow Bob saves the current presentation to its history and resets all personal description files, special announcements and additional concerns. 
 
-A few weeks after, Jane is asked to tell what has happen in the last meetings because the entire company run out of money. She open the history of Johns personal slides, which is the markdown file `John Doe.md`, which is stored in `content/history/personal`:
+A few weeks after, Jane is asked to tell what has happen in the last meetings because the entire company run out of money. She opens the history of Johns personal slides, which is the markdown file `John Doe.md`. This file is stored in `content/history/personal/`:
 
 
 ```markdown
@@ -236,7 +240,7 @@ A few weeks after, Jane is asked to tell what has happen in the last meetings be
 
 For clarification, Jane also opens the history for special announcements and additional concerns, stored in `content/history/special`.
 
-After a brief meeting with HR, John is moved to another team. A few month later, Alice joins the team as a replacement for John. She really don't like Bananas.
+After a brief meeting with HR, John is moved to another team. A few month later, a new team mate, Alice, joins the team as a replacement for John. She really don't like Bananas.
 
 To give Alice the possibility to make her personal slides with Slideshow Bob, Jane types:
 
@@ -247,9 +251,9 @@ $ python add-user.py Alice Wonderland
 
 ```
 
-And everything is set up for Alice. Jane must not remove `John Doe.md` from `content/latest/personal` because he will not add new information in his new slides, and Slideshow Bob will not create a slide for him any longer. 
+And everything is set up for Alice. Jane must not remove `John Doe.md` from `content/latest/personal/` because he will not add new information in his new slides, and Slideshow Bob will not create a slide for him any longer. 
 
-However, after a few year, Jane wants to wipe out John from the history of her company once and for all. 
+However, after a few years, Jane wants to wipe out John from the history of her company once and for all. 
 
 Therefore, she deletes `content/latest/personal/John Doe.md` and `content/history/personal/John Doe.md`.
 
@@ -257,7 +261,7 @@ Easy as that.
 
 ## Commands
 
-Slideshow Bob is commanded by a handful of python scripts. The basic commands that are used on a regular basis are:
+Slideshow Bob is commanded by a handful of Python scripts. The basic commands that are used on a regular basis are:
 
 1. `start.py` runs the html code generator, and opens the resulting presentation in the default web browser. Internally, this script just calls `build.py` and `open.py` (see below)
 
