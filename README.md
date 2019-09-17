@@ -19,7 +19,7 @@ In a nutshell, these are the feature of Slideshow Bob:
 
 - **Clear and Modern**: simple design language to focus on content with HTML5/CSS slides supporting directly jumps to specific slides, and navigation though the presentation by both arrow keys and the navigation bar. The responsive design supports tiny beamer resolutions, too.
 
-- **History Management**: commit based history management that adds individual presenters content to the 
+- **History Management**: commit-based history management that adds individual presenters content to the 
   presents report file, and archives additional concerns and announcements. Report files are markdown formatted and are ordered by commit date.
 - Scriptable: a few python scripts to commit the latest presentation to history, build the presentation or add new presenters. 
 
