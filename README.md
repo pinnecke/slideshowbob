@@ -109,7 +109,7 @@ During the days, he fills his personal slide description file with the following
 
 ### Special Announcements and Additional Concerns
 
-Before the presentation day, John remembers that he not yet talked about his new strategy. Therefore, we will add some information to the special announcement slide. 
+Before the presentation day, John remembers that he not yet talked about his new strategy. Therefore, he will add some information to the special announcement slide. 
 For this, he edits the announcements description file which is a markdown file by the name `Special Announcements.md`, which is always located in `content/latest/special`. 
 
 This file has the following structure:
